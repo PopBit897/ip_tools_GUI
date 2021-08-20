@@ -148,7 +148,7 @@ def nextpag1():
             def reset():
                 res.destroy()
                 bt_res.destroy()
-            bt_res=tk.Button(root2,text="CLEAR",command=reset)
+            bt_res=tk.Button(root2,text="CLEAN ",command=reset)
             bt_res.place(x=290,y=345)
             bt_res.configure(bg="red", fg="black",
                              activebackground="black", activeforeground="red")
