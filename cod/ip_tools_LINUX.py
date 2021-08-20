@@ -24,8 +24,8 @@ root.configure(background="#000000")
 
 # frame setting
 Frame1 = Frame(root)
-Frame1.place(relx=0.068, rely=0.044, relheight=0.744
-                                      , relwidth=0.899)
+Frame1.place(relx=0.089, rely=0.044, relheight=0.724
+                                      , relwidth=0.839)
 Frame1.configure(relief='groove')
 Frame1.configure(borderwidth="3")
 Frame1.configure(relief="groove")
@@ -150,6 +150,9 @@ def nextpag1():
                 bt_res.destroy()
             bt_res=tk.Button(root2,text="CLEAR",command=reset)
             bt_res.place(x=290,y=345)
+            bt_res.configure(bg="red", fg="black",
+                             activebackground="black", activeforeground="red")
+            bt_res.configure(relief="flat")
        except:
             print(' website or host not existing :(')
        # label res
