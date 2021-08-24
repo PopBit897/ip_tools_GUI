@@ -1,3 +1,3 @@
 cd cod 
-python3 ip_tools_LINUX.py
+python3 ip_tools.py
 
