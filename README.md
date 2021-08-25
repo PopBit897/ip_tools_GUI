@@ -18,7 +18,7 @@
   
   Install use gitclone: 
   
-         sudo git clone https://github.com/RedAnonymusITA/ip_tools_GUI.git
+          git clone https://github.com/RedAnonymusITA/ip_tools_GUI.git
          
  Open folder:   
  
