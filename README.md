@@ -10,6 +10,6 @@
   
   librery : tkinter,time,socket,webbrowser,os.
   
-  p_tools v0.0.1-0 for cmd and terminal :https://github.com/RedAnonymusITA/ip-tools/releases/tag/v0.0.1
+  ip_tools v0.0.1-0 for cmd and terminal :https://github.com/RedAnonymusITA/ip-tools/releases/tag/v0.0.1
   
- p_tools v0.1.1-0 for cmd and terminal : https://github.com/RedAnonymusITA/ip-tools
+  ip_tools v0.1.1-0 for cmd and terminal : https://github.com/RedAnonymusITA/ip-tools
