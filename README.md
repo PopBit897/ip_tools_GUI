@@ -14,18 +14,19 @@
   
   ip_tools v0.1.1-0 for cmd and terminal : https://github.com/RedAnonymusITA/ip-tools
   
-  how install for linux :
-  install use gitclone: 
+  How install for linux :
+  
+  Install use gitclone: 
   
          sudo git clone https://github.com/RedAnonymusITA/ip_tools_GUI.git
          
- open folde:   
+ Open folder:   
  
           cd ip_tools_GUI
- root permitted for Execute:
+ Root allow to run:
        
        sudo chmod a+x open_for_linux.sh
- open file :
+ Open file :
        
        ./open_for_linux.sh 
        
