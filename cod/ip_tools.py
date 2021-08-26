@@ -127,7 +127,7 @@ class ip_web:
                             win2.geometry("400x99")
                             win2.title("HELP")
                             txt3 = tk.Label(win2, text="""example filename : my-web-ip.txt \n
-                        example folder path:/home/user-name/Desktop""")
+                    example folder path:/home/user-name/Desktop""")
                             txt3.place(x=4, y=3)
                             win2.mainloop()
         
