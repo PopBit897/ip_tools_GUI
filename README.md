@@ -18,15 +18,15 @@
   
   Install use gitclone: 
   
-          git clone https://github.com/RedAnonymusITA/ip_tools_GUI.git
+    git clone https://github.com/RedAnonymusITA/ip_tools_GUI.git
          
  Open folder:   
  
-          cd ip_tools_GUI
+    cd ip_tools_GUI
  Root allow to run:
        
-       sudo chmod a+x open_for_linux.sh
+    sudo chmod a+x open_for_linux.sh
  Open file :
        
-       ./open_for_linux.sh 
+    ./open_for_linux.sh 
        
