@@ -34,26 +34,41 @@ class info1:
     cod : python 
     os:for windows ,mac os and GUI/linux
     ver :ip_tools_gui_0.0.1 alpha
-    req:python 3.0 or new (no python 2.0 no test)
+    req:python 3.0 or latest version (not python 2.0)
     original lenguage ip_tools: italy
     --------------------------------------
            more APP
     ip_tools_0.0.1 for termux and cmd 
     leg : en
     Os= windows,Mac and GUI/linux
-    ip_tools_0.0.2 for termux and cmd
+    ip_tools_0.1.1 for termux and cmd
         leg= ita and en 
     Os= windows,Mac and GUI/linux """, bg='black', fg='red')
         t.place(x=20, y=3)
+        def other():
+            win_install = tk.Tk()
+            win_install.geometry("500x200")
+            win_install.title("install_ip_tools for terminal and cmd ")
+            def l_dow():
+                self.t2 =time.sleep(2)
+                url1 ="https://github.com/RedAnonymusITA/ip-tools"
+                web1 =webbrowser.open(url1)
+               
 
-        def more1():
-            import time
+            def dow():
+                
+                url2 = "https://github.com/RedAnonymusITA/ip-tools/releases/tag/v0.0.1"
+                self.t = time.sleep(2)
+                self.web = webbrowser.open(url2)
+            bt_dow1 = tk.Button(win_install, text="download latest version",command=l_dow)
+            bt_dow1.place(relx=0.220, rely=0.120, height=41, width=300)
+            bt_dow = tk.Button(win_install,text="download V0.0.1",command=dow)
+            bt_dow.place(relx=0.220, rely=0.520, height=41, width=300)
+           
 
-            self.t = time.sleep(3)
-            self.web = webbrowser.open(link)
 
           # buttun more
-        self.bt_m = tk.Button(root_i, text='github ', command=more1)
+        self.bt_m = tk.Button(root_i, text='github ', command=other)
         self.bt_m.place(x=200, y=310)
         self.bt_m.configure(bg='red', fg='black',
                             activebackground='black', activeforeground='red')
@@ -109,8 +124,9 @@ class ip_web:
                     def __init__(self):
 
                         win = tk.Tk()
-                        win.geometry('500x300')
+                        win.geometry("500x300")
                         win.title("SAVE FILE")
+                        win.resizable(False,False)
 
                         self.txt1 = tk.Label(win, text="WRITE  FILE NAME : ")
                         self.txt1.place(relx=0.220, rely=0.099)
@@ -136,6 +152,11 @@ class ip_web:
                             file=open(src+name,'w')
                             file.write(web_ip)
                             file.close()
+                            file_info = tk.Label(win,text='file saved in folder:')
+                            file_info2 =tk.Label(win, text=file)
+                            file_info2.place(relx=0.489,rely=0.870,width=212)
+                            file_info.place(relx =0.220,rely=0.870,width=124)
+                           
                             pass
 
                         self.bt_save1 = tk.Button(win, text="SAVE FILE",command=save_file)
@@ -165,8 +186,7 @@ class ip_web:
 
                 bt_save = tk.Button(root2, text="SAVE FILE", command=save)
                 bt_save.place(x=310, y=345)
-                bt_save.configure(
-                    bg='red', fg='black', activeforeground='red', activebackground='black')
+                bt_save.configure(bg='red', fg='black', activeforeground='red', activebackground='black')
                 bt_save.configure(relief='flat')
 
             except:
