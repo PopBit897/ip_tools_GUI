@@ -1,5 +1,5 @@
 # import librery
-from os import system
+
 from posixpath import dirname
 import time
 import webbrowser
