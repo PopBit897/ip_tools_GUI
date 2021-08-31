@@ -37,7 +37,7 @@ class info1:
     req:python 3.0 or latest version (not python 2.0)
     original lenguage ip_tools: italy
     --------------------------------------
-           more APP
+               other software by rda
     ip_tools_0.0.1 for termux and cmd 
     leg : en
     Os= windows,Mac and GUI/linux
@@ -48,6 +48,8 @@ class info1:
         def other():
             win_install = tk.Tk()
             win_install.geometry("500x200")
+            win_install.resizable(False, False)
+            win_install.configure(background="black")
             win_install.title("install_ip_tools for terminal and cmd ")
             def l_dow():
                 self.t2 =time.sleep(2)
@@ -62,18 +64,24 @@ class info1:
                 self.web = webbrowser.open(url2)
             bt_dow1 = tk.Button(win_install, text="download latest version",command=l_dow)
             bt_dow1.place(relx=0.220, rely=0.120, height=41, width=300)
+            bt_dow1.configure(bg="red",fg='black',activebackground='black',activeforeground='red')
+            bt_dow1.configure(relief='flat')
+
+
             bt_dow = tk.Button(win_install,text="download V0.0.1",command=dow)
             bt_dow.place(relx=0.220, rely=0.520, height=41, width=300)
+            bt_dow.configure(bg="red",fg="black",activebackground='black',activeforeground='red')
+            bt_dow.configure(relief='flat')
            
 
 
           # buttun more
-        self.bt_m = tk.Button(root_i, text='github ', command=other)
-        self.bt_m.place(x=200, y=310)
-        self.bt_m.configure(bg='red', fg='black',
+        self.bt_other = tk.Button(root_i, text='other ', command=other)
+        self.bt_other.place(x=200, y=310)
+        self.bt_other.configure(bg='red', fg='black',
                             activebackground='black', activeforeground='red')
-        self.bt_m.configure(borderwidth='3')
-        self.bt_m.configure(relief='flat')
+        self.bt_other.configure(borderwidth='3')
+        self.bt_other.configure(relief='flat')
 
 
 class ip_web:
@@ -127,43 +135,61 @@ class ip_web:
                         win.geometry("500x300")
                         win.title("SAVE FILE")
                         win.resizable(False,False)
+                        win.configure(background='black')
 
                         self.txt1 = tk.Label(win, text="WRITE  FILE NAME : ")
                         self.txt1.place(relx=0.220, rely=0.099)
+                        self.txt1.configure(bg='black',fg='red')
                         self.filename = tk.Entry(win)
                         self.filename.place(relx=0.220, rely=0.190, height=29, width=279)
+                        self.filename.configure(bg='black',fg='red')
                         self.txt2 = tk.Label(win, text="WRITE FOLDER PATH : ")
                         self.txt2.place(relx=0.220, rely=0.320)
+                        self.txt2.configure(bg='black',fg='red')
                         self.folder = tk.Entry(win)
                         self.folder.place(relx=0.220, rely=0.420, height=29, width=279)
+                        self.folder.configure(bg='black',fg='red')
               
                         def help_save():
                             win2 = tk.Tk()
                             win2.geometry("400x99")
+                            win2.resizable(False, False)
+                            win2.configure(background="black")
                             win2.title("HELP")
                             txt3 = tk.Label(win2, text="""example filename : my-web-ip.txt \n
-                    example folder path:/home/user-name/Desktop""")
+                example folder path:/home/user-name/Desktop/""")
                             txt3.place(x=4, y=3)
+                            txt3.configure(bg='black',fg='red' )
                             win2.mainloop()
         
                         def save_file():
-                            name = self.filename.get()
-                            src = self.folder.get()
-                            file=open(src+name,'w')
-                            file.write(web_ip)
-                            file.close()
-                            file_info = tk.Label(win,text='file saved in folder:')
-                            file_info2 =tk.Label(win, text=file)
-                            file_info2.place(relx=0.489,rely=0.870,width=212)
-                            file_info.place(relx =0.220,rely=0.870,width=124)
-                           
-                            pass
+                             try:
+                                name = self.filename.get()
+                                src = self.folder.get()
+                                file=open(src+name,'w')
+                                file.write(web_ip)
+                                file.close()
+                                file_info = tk.Label(win,text='file saved in folder:')
+                                file_info2 =tk.Label(win, text=file)
+                                file_info.configure(bg='black',fg='red')
+                                file_info2.configure(bg='black',fg='red')
+                                file_info2.place(relx=0.489,rely=0.870,width=212)
+                                file_info.place(relx =0.220,rely=0.870,width=124)
+                             except:
+                                 pass
+                               
+
+                            
 
                         self.bt_save1 = tk.Button(win, text="SAVE FILE",command=save_file)
                         self.bt_save1.place(relx=0.220, rely=0.620, height=44, width=99)
+                        self.bt_save1.configure(bg='red',fg="black",activebackground='black',activeforeground="red")
+                        self.bt_save1.configure(relief='flat')
 
-                        self.bt_clear = tk.Button(win, text="HELP", command=help_save)
-                        self.bt_clear.place(relx=0.590, rely=0.620, height=44, width=99)
+                        self.bt_help = tk.Button(win, text="HELP", command=help_save)
+                        self.bt_help.place(relx=0.590, rely=0.620, height=44, width=99)
+                        self.bt_help.configure(bg='red',fg="black",activebackground='black',activeforeground="red")
+                        self.bt_help.configure(relief='flat')
 
             
 
