@@ -29,4 +29,8 @@
  Open file :
        
     ./open_for_linux.sh 
+ 
+ Automatic install for linux :
+    
+    git clone https://github.com/RedAnonymusITA/auto_install-GUI.git
        
