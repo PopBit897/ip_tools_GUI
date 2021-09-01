@@ -24,8 +24,8 @@
  
     cd ip_tools_GUI
  Root allow to run:
-       
-    sudo chmod a+x open_for_linux.sh
+ 
+       sudo chmod a+x open_for_linux.sh
  Open file :
        
     ./open_for_linux.sh 
