@@ -30,7 +30,7 @@
        
     ./open_for_linux.sh 
  
- Automatic install for linux :
+ Automatic install and open for linux :
     
     git clone https://github.com/RedAnonymusITA/auto_install-GUI.git
        
