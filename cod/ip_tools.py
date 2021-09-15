@@ -1,8 +1,6 @@
 # import librery
 
-from posixpath import dirname
-import time
-import webbrowser
+
 import socket
 import tkinter as tk
 from tkinter.constants import DISABLED, HIDDEN, NORMAL
