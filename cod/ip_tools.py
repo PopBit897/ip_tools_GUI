@@ -52,15 +52,16 @@ class info1:
             win_install.title("install_ip_tools for terminal and cmd ")
             
             def l_dow():
-                def start_bt(self):
-                    self.terminal = os.system('cd ip')
-                    self.terminal = os.system('chmod +x start.sh')
-                    self.terminal = os.system('./start.sh')
+                def start_bt():
+                    terminal = os.system('cd ip_tools')
+                    terminal = os.system('cd ip')
+                    terminal = os.system('chmod +x start.sh')
+                    terminal = os.system('./start.sh')
                 t2 =time.sleep(2)
                 terminal = os.system('git clone https://github.com/RedAnonymusITA/ip-tools.git')
                 win_start = tk.Tk()
                 win_start.title('start ip_tools')
-                win_start.geometry('300x300')
+                win_start.geometry('300x500')
                 self.bt_start = tk.Button(win_start, text='start',command = start_bt)
                 self.bt_start.place(relx=0.220, rely=0.120, height=41, width=300)
               
