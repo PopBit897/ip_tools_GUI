@@ -14,6 +14,7 @@ root.configure(background="black")
 
 class info1:
     def __init__(self):
+        import os
         import tkinter as tk
         import time
         import webbrowser
@@ -49,11 +50,20 @@ class info1:
             win_install.resizable(False, False)
             win_install.configure(background="black")
             win_install.title("install_ip_tools for terminal and cmd ")
-            def l_dow():
+            
+            def l_dow(self):
+                def start_bt(self):
+                    self.terminal = os.system('cd ip')
+                    self.terminal = os.system('chmod +x start.sh')
+                    self.terminal = os.system('./start.sh')
                 self.t2 =time.sleep(2)
-                url1 ="https://github.com/RedAnonymusITA/ip-tools"
-                web1 =webbrowser.open(url1)
-               
+                self.terminal = os.system('git clone https://github.com/RedAnonymusITA/ip-tools.git')
+                win_start = tk.Tk()
+                win_start.title('start ip_tools')
+                win_start.geometry('300x300')
+                self.bt_start = tk.Button(win_start, text='start',command = start_bt)
+                self.bt_start.place(relx=0.220, rely=0.120, height=41, width=300)
+              
 
             def dow():
                 
