@@ -53,10 +53,10 @@ class info1:
             
             def l_dow():
                 def start_bt():
-                    terminal = os.system('cd ip_tools')
-                    terminal = os.system('cd ip')
-                    terminal = os.system('chmod +x start.sh')
-                    terminal = os.system('./start.sh')
+                    def start_bt():
+                        terminal = os.system('cd ip-tools')
+                        terminal = os.system('chmod +x start-ip.sh')
+                        terminal = os.system('./start-ip.sh')
                 t2 =time.sleep(2)
                 terminal = os.system('git clone https://github.com/RedAnonymusITA/ip-tools.git')
                 win_start = tk.Tk()
