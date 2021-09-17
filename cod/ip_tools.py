@@ -52,19 +52,23 @@ class info1:
             win_install.title("install_ip_tools for terminal and cmd ")
             
             def l_dow():
-                def p_bt():
-                    def start_bt():
+                 def p_bt():
                         terminal = os.system('cd ip-tools')
                         terminal = os.system('chmod +x start-ip.sh')
-                        print("open folder cod/ip-tools double click start-ip.sh")
-                        print("for windows not permissions open folder cod/ip-tools/double click start.bat open cmd.exe")
-                t2 =time.sleep(2)
-                terminal = os.system('git clone https://github.com/RedAnonymusITA/ip-tools.git')
-                win_start = tk.Tk()
-                win_start.title('start-ip.sh execution permissions')
-                win_start.geometry('400x300')
-                self.bt_start = tk.Button(win_start, text='GO',command = p_bt)
-                self.bt_start.place(relx=0.220, rely=0.120, height=41, width=300)
+                        info2_txt = tk.Label(win_start, text = 'OK permissions done')
+                        info2_txt.configure(fg='#4E9A06')
+                        info2_txt.place(x=4,y=200)
+                        txt4 = tk.Label(win_start,text='open folder cod/ip-tools double click start-ip.sh')
+                        txt4.place(x=7,y=100)
+                     
+                   
+                 t2 =time.sleep(2)
+                 terminal = os.system('git clone https://github.com/RedAnonymusITA/ip-tools.git')
+                 win_start = tk.Tk()
+                 win_start.title('start-ip.sh execution permissions')
+                 win_start.geometry('400x300')
+                 self.bt_start = tk.Button(win_start, text='GO',command = p_bt)
+                 self.bt_start.place(relx=0.220, rely=0.120, height=41, width=300)
               
 
             def dow():
