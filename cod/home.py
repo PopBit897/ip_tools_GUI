@@ -1,6 +1,5 @@
 # import librery
-
-
+import os
 import socket
 import tkinter as tk
 from tkinter.constants import DISABLED, HIDDEN, NORMAL
@@ -98,6 +97,8 @@ class ip_web:
         import time
         import socket
         import tkinter as tk
+        import webbrowser
+        
         root2 = tk.Tk()
         root2.geometry("600x450+444+290")
         root2.minsize(120, 1)
@@ -183,8 +184,7 @@ class ip_web:
                                 file_info.place(relx =0.220,rely=0.870,width=124)
                              except:
                                  pass
-                               
-
+                       
                             
 
                         self.bt_save1 = tk.Button(win, text="SAVE FILE",command=save_file)
@@ -196,7 +196,8 @@ class ip_web:
                         self.bt_help.place(relx=0.590, rely=0.620, height=44, width=99)
                         self.bt_help.configure(bg='red',fg="black",activebackground='black',activeforeground="red")
                         self.bt_help.configure(relief='flat')
-
+                    # -------------------------------------
+                      
             
 
 
@@ -208,7 +209,28 @@ class ip_web:
                     res.destroy()
                     bt_res.destroy()
                     bt_save.destroy()
+                    open_browser.destroy()
+                    
                     textbox1.configure(state=NORMAL)
+                
+                   
+                
+
+                    
+                    pass
+
+                def open_wb():
+                    ip = str(web_ip)
+                    txt_ip =str("http://%s"%((ip)))
+                    web = webbrowser.open(txt_ip)
+                    
+                    
+                    
+                    
+    
+                 
+                      
+              
 
                 bt_res = tk.Button(root2, text="CLEAR", command=reset)
                 bt_res.place(x=230, y=345)
@@ -220,6 +242,14 @@ class ip_web:
                 bt_save.place(x=310, y=345)
                 bt_save.configure(bg='red', fg='black', activeforeground='red', activebackground='black')
                 bt_save.configure(relief='flat')
+                open_browser= tk.Button(root2, text = ' open_browser',command=open_wb)
+                open_browser.place(x=410, y=345)
+               
+        
+                open_browser.configure(bg='red', fg='black', activeforeground='red', activebackground='black')
+                open_browser.configure(relief='flat')
+                
+
 
             except:
                 print(' website or host not existing :(')
@@ -241,6 +271,49 @@ class ip_web:
         if __name__ == "__main__":
             root2.mainloop()
 
+class  more_tools:
+    def __init__(self):
+        master = tk.Tk()
+        master.geometry('300x300')
+        master.title('More Tools')
+        master.configure(bg='black')
+        master.resizable(False, False)
+       
+        # set button  
+        self.bt_new_host = tk.Button(master, text='set_new_hostname',command=hostname1)
+        self.bt_new_host.place(x=20, y=10)
+        self.bt_new_host.configure(bg='red', fg='black',
+                                 activebackground='black', activeforeground='red', relief='flat', borderwidth='2')
+class hostname1:
+    def __init__(self):
+       
+       
+        master = tk.Tk()
+        master.geometry('600x300')    
+        master.title('Set_Hostname')
+        master.configure(bg='black')
+        master.resizable(False, False)
+        # def command for  button  go and entry 
+        def  go_host ():
+          
+                self.entry_convert = self.new_hostname.get()
+                self.host =os.system('hostnamectl set-hostname  %s'%((self.entry_convert)))
+                self.myhostname =os.system('hostname')
+                self.help1 = tk.Label(master,text="open you terminal and type : hostname or hostnamectl")
+                self.help1.place(x=120,y=100)
+
+         
+
+
+       
+        # set entry 
+        self.new_hostname= tk.Entry(master, text= 'new_hostname')
+        self.new_hostname.place(relx=0.270, rely=0.190, height=29, width=279)
+        self.new_hostname.configure(bg='black', fg='red')
+        # set button  go to entry 
+        self.bt_go = tk.Button(master,text='GO',command=go_host)
+        self.bt_go.place(x=470, y=60)
+        self.bt_go.configure(bg='red', fg='black',activebackground='black', activeforeground='red', relief='flat', borderwidth='2')
 
 class frame():
     def __init__(self, master):
@@ -274,7 +347,12 @@ class frame():
         self.bt_next.place(relx=0.100, rely=0.822, height=44, width=217)
         self.bt_info = tk.Button(root, text='INFO', command=info1, bg='red', fg='black',
                                  activebackground='black', activeforeground='red', relief='flat', borderwidth='2')
-        self.bt_info.place(relx=0.538, rely=0.822, height=44, width=217)
+        self.bt_info.place(relx=0.830, rely=0.822, height=44, width=100)
+
+        self.bt_more= tk.Button(master, text='More tools',command=more_tools)
+        self.bt_more.place(relx=0.530, rely=0.822, height=44, width=217)
+        self.bt_more.configure(bg='red', fg='black',
+                                 activebackground='black', activeforeground='red', relief='flat', borderwidth='2')
 
 
 e = frame(root)

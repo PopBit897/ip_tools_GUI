@@ -1,0 +1,12 @@
+﻿this and the 0.0.1_ALPHA version, the updated version will be 0.1.1_ALPHA.
+-------------------------------------------------------------------------------
+warning:
+NOT support for windows system (file open_for_win.bat is for demo ,default not support graphic windows system ).
+-------------------------------------------------------------------------------
+Author:Pop Mario Denis .
+Nickname author is:Red Anonymous italia (RDA-ITA).
+Script : python3.
+Library is tkinter,os,web browser,time.
+Open source software ,by license :GENERAL PUBLIC LICENSE.
+ 
+other software is ip_tools-v0.0.1 and ip_tools-v0.1.1 for terminal mac,Linux and windows  system /Git.
